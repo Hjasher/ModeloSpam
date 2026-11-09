@@ -1,0 +1,102 @@
+{
+    "base_de_datos": "SMS Spam Collection (spam.csv)",
+    "caracteristicas": [
+        "enlaces",
+        "palabras_promocionales"
+    ],
+    "clases": [
+        "Normal",
+        "Spam"
+    ],
+    "palabras_promocionales": [
+        "award",
+        "bargain",
+        "bonus",
+        "cash",
+        "chance",
+        "cheap",
+        "claim",
+        "congratulations",
+        "credit",
+        "deal",
+        "discount",
+        "exclusive",
+        "free",
+        "gift",
+        "guaranteed",
+        "limited",
+        "offer",
+        "pounds",
+        "prize",
+        "promotion",
+        "reward",
+        "selected",
+        "subscribe",
+        "trial",
+        "unlimited",
+        "urgent",
+        "voucher",
+        "win",
+        "winner",
+        "won"
+    ],
+    "mensajes_repetidos_eliminados": 415,
+    "n_entrenamiento": 3609,
+    "n_prueba": 1548,
+    "porcentaje_spam": 0.1243,
+    "exactitud_referencia_todo_normal": 0.876,
+    "coinciden_en_prueba": 1548,
+    "modelos": {
+        "SVM": {
+            "exactitud": 0.9335,
+            "matriz_confusion": [
+                [
+                    1349,
+                    7
+                ],
+                [
+                    96,
+                    96
+                ]
+            ],
+            "precision_spam": 0.932,
+            "recall_spam": 0.5,
+            "f1_spam": 0.6508
+        },
+        "Árbol de decisión": {
+            "exactitud": 0.9335,
+            "matriz_confusion": [
+                [
+                    1349,
+                    7
+                ],
+                [
+                    96,
+                    96
+                ]
+            ],
+            "precision_spam": 0.932,
+            "recall_spam": 0.5,
+            "f1_spam": 0.6508
+        }
+    },
+    "hiperparametros": {
+        "svm": {
+            "kernel": "rbf",
+            "C": 1.0,
+            "gamma": "scale"
+        },
+        "arbol": {
+            "max_depth": 4,
+            "min_samples_leaf": 10
+        },
+        "test_size": 0.3,
+        "random_state": 42
+    },
+    "versiones": {
+        "python": "3.13.18",
+        "scikit-learn": "1.6.1",
+        "numpy": "2.5.4",
+        "pandas": "3.1.1"
+    }
+}
